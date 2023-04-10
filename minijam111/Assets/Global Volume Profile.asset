@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8227815048920390085
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81180773991d8724ab7f2d216912b564, type: 3}
+  m_Name: ChromaticAberration
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0.2
+    min: 0
+    max: 1
 --- !u!114 &-4001173179305973132
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -82,7 +101,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.2
+    m_Value: 0.18
     min: -1
     max: 1
   xMultiplier:
@@ -120,6 +139,7 @@ MonoBehaviour:
   - {fileID: -1834954161554868161}
   - {fileID: 2107261794821340308}
   - {fileID: -4001173179305973132}
+  - {fileID: -8227815048920390085}
 --- !u!114 &2107261794821340308
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -136,7 +156,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   distance:
     m_OverrideState: 1
-    m_Value: 0.1
+    m_Value: 0.2
     min: 0
     max: 1
   cropToFit:
