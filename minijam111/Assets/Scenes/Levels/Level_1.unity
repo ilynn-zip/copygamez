@@ -7593,6 +7593,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 159490644079958207, guid: 63de109a4c04db947829d26b238e0792, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 882588396608171654, guid: 63de109a4c04db947829d26b238e0792, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1452721896951149109, guid: 63de109a4c04db947829d26b238e0792, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -7668,6 +7676,10 @@ PrefabInstance:
     - target: {fileID: 1777136615368865044, guid: 63de109a4c04db947829d26b238e0792, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: RestartButtonDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 2251141089594419642, guid: 63de109a4c04db947829d26b238e0792, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2320712556025456209, guid: 63de109a4c04db947829d26b238e0792, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -7845,6 +7857,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6223902585104493686, guid: 63de109a4c04db947829d26b238e0792, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8330197642181167469, guid: 63de109a4c04db947829d26b238e0792, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7859,6 +7875,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8330197642181167469, guid: 63de109a4c04db947829d26b238e0792, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837972408745386845, guid: 63de109a4c04db947829d26b238e0792, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
