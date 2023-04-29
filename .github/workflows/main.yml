@@ -98,8 +98,18 @@ jobs:
           path: build/WebGL
 
 
-  deployPages:
+  modifyIndex:
     needs: buildWebGL
+    name: Modify index.html 🖊️
+    uses: jaywcjlove/github-action-modify-file-content@main
+    with:
+      branch: gh-pages
+      path: index.html
+      body: $NEW_INDEX
+      overwrite: 'true'
+
+  deployPages:
+    needs: modifyIndex
     name: Deploy to Github Pages 🚀
     runs-on: ubuntu-latest
     steps:
