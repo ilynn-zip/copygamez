@@ -108,7 +108,7 @@ jobs:
       overwrite: 'true'
 
   deployPages:
-    needs: modifyIndex
+    needs: buildWebGL
     name: Deploy to Github Pages 🚀
     runs-on: ubuntu-latest
     steps:
