@@ -115,6 +115,7 @@ jobs:
           git config --global user.name ilynn-zip
           git config --global user.email vch.dot@gmail.com
 
+          git fetch
           git checkout gh-pages
 
           git add -A
