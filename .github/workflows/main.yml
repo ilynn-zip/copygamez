@@ -102,13 +102,22 @@ jobs:
     name: Modify index.html
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
       - name: Rewrite index.html
-        uses: jaywcjlove/github-action-modify-file-content@main
-        with:
-          branch: gh-pages
-          path: index.html
-          body: $NEW_INDEX
-          overwrite: 'true'
+        run: |
+          cat $NEW_INDEX > index.html
+      
+      - name: Commit and push changes
+        run: |
+          git config --gloabal user.name "ilynn-zip"
+          git config --global user.email "vch.dot@gmail.com"
+
+          git checkout gh-pages
+          git add -A
+          git commit -m "rewrite index"
+          git push
 
   deployPages:
     needs: modifyIndex
