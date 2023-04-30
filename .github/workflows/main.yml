@@ -119,6 +119,7 @@ jobs:
           echo "$NEW_INDEX" > index.html
       
       - name: Commit and push changes
+        continue-on-error: true
         run: |
           git add -A
           git commit -m "Modify 🖊️"
