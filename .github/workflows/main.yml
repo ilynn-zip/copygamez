@@ -114,7 +114,6 @@ jobs:
           git config --global user.name ilynn-zip
           git config --global user.email vch.dot@gmail.com
 
-          git checkout gh-pages
           git add -A
           git commit -m "rewrite index"
           git push
