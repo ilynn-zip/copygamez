@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
 
     public int playerState { get; private set; }
     public bool facingRight { get; private set; }
+    public bool isDead { get; private set; }
 
     private void Start()
     {
@@ -41,6 +42,8 @@ public class PlayerMovement : MonoBehaviour
         _mjump = false;
 
         _facingRight = true;
+
+        isDead = false;
 }
 
     private void Update()
@@ -154,6 +157,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Dead()
     {
+        isDead = true;
+
         _audioSource.PlayOneShot(_dead);
 
         _enableInput = false;

@@ -3,9 +3,14 @@ using UnityEngine;
 public class Key : MonoBehaviour
 {
     private GameObject _hold;
-    private bool _pick = false;
 
-        
+    public bool _pick { get; private set; }
+
+    private void Start()
+    {
+        _pick = false;
+    }
+
     void FixedUpdate()
     {
         if (_pick)

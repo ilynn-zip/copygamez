@@ -12,6 +12,10 @@ public class Objectives : MonoBehaviour
 
     [SerializeField] private int _keyCount;
 
+    public int KeyCount
+    {
+        get { return _keyCount; }
+    }
 
     private void Update()
     {
@@ -35,7 +39,8 @@ public class Objectives : MonoBehaviour
                 GameObject.FindGameObjectWithTag("OpenDoor").GetComponent<SpriteRenderer>().enabled = true;
                 GameObject.FindGameObjectWithTag("OpenDoor").GetComponent<BoxCollider2D>().enabled = true;
             }
-            
+
+            Debug.Log("trigger");
 
         }
 
