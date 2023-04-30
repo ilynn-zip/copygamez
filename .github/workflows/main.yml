@@ -7,7 +7,7 @@ env:
   NEW_INDEX: ${{ vars.NEW_INDEX }}
 
 jobs:
-   testRunner:
+  testRunner:
     name: Test in ${{ matrix.testMode }} ✨
     runs-on: ubuntu-latest
     strategy:
@@ -29,7 +29,7 @@ jobs:
         with:
           path: .git/lfs
           key: ${{ runner.os }}-lfs-${{ hashFiles('.lfs-assets-id') }}
-
+  
       - name: Git LFS Pull
         run: |
           git lfs pull
@@ -55,7 +55,7 @@ jobs:
         with:
           name: Test results (${{ matrix.testMode }})
           path: ${{ steps.testRunner.outputs.artifactsPath }}
-
+  
   buildWebGL:
     needs: testRunner
     name: Build for WebGL 🖥️
