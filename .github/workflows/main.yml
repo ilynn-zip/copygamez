@@ -108,7 +108,7 @@ jobs:
 
       - name: Rewrite index.html
         run: |
-          cat > index.html $NEW_INDEX 
+          echo "$NEW_INDEX" > index.html
       
       - name: Commit and push changes
         run: |
