@@ -4,7 +4,7 @@ on: push
 
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-  NEW_INDEX: ${{ variables.NEW_INDEX }}
+  NEW_INDEX: ${{ NEW_INDEX }}
 
 jobs:
   # testRunner:
