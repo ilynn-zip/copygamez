@@ -98,8 +98,27 @@ jobs:
           name: build-WebGL
           path: build/WebGL
 
-  modifyIndex:
+  deployPages:
     needs: buildWebGL
+    name: Deploy to Github Pages 🚀
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - uses: actions/download-artifact@v3
+        with:
+          name: build-WebGL
+          path: build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: build/WebGL
+
+  modifyIndex:
+    needs: deployPages
     name: Modify index 🖊️
     runs-on: ubuntu-latest
     steps:
@@ -124,22 +143,3 @@ jobs:
           git add -A
           git commit -m "Modify 🖊️"
           git push
-
-  deployPages:
-    needs: modifyIndex
-    name: Deploy to Github Pages 🚀
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - uses: actions/download-artifact@v3
-        with:
-          name: build-WebGL
-          path: build
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.4
-        with:
-          branch: gh-pages
-          folder: build/WebGL
