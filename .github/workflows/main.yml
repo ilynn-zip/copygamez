@@ -111,7 +111,6 @@ jobs:
       
       - name: Commit and push changes
         run: |
-          git checkout gh-pages
           git add -A
           git commit -m "rewrite index"
           git push
